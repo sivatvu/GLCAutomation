@@ -19,6 +19,7 @@ Scenario Outline: Account Registration and Verify the Credit Score
     #When I select the Title 
     When I enter the following values into the Personal Details page "<FirstName>", "<SurName>", "<DateofBirth>", "<TelephoneNumber>" and "<GrossAnnualIncome>"
     #And I select Employment and Residential Status
+	#testcommit
     And I enter my address
 	And the month and year I moved in
 	And I click on Address Search
