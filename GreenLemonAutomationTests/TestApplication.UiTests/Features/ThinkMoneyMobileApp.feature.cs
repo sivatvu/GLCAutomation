@@ -143,14 +143,27 @@ testRunner.And("I click on Goals Icon", ((string)(null)), ((TechTalk.SpecFlow.Ta
 testRunner.And("I can autochat to Buy a House", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 38
 testRunner.Then("the autochat window opens", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
-testRunner.When("I click on Not Yet for the question First, do you already own a property?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
+testRunner.When("I click on Not Yet for the question First, do you already own a property?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
 testRunner.Then("I can see the Auto response as - Ok, and when you get your new property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 43
+#line 45
 testRunner.When("I click on Restart Plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
+#line 46
 testRunner.Then("the chat windows restarts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Reports", SourceLine=57)]
+        public virtual void Reports()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reports", null, ((string[])(null)));
+#line 58
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
 #line hidden
             this.ScenarioCleanup();
         }
