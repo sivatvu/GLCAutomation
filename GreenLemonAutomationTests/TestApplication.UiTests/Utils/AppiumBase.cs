@@ -30,7 +30,7 @@ namespace TestApplication.UiTests.Utils
             caps.SetCapability("browserstack.key", accessKey);
             caps.SetCapability("device", "Google Pixel");
             caps.SetCapability("os_version", "7.1");
-            caps.SetCapability("app", "bs://46f3d6ba79d9381a4891fcff58a7867387fe2184");
+            caps.SetCapability("app", "bs://afead7c3c7b20b76e26a5dd6c31e9b414905eb6d");
             driver = new AndroidDriver<AndroidElement>(new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
             
 

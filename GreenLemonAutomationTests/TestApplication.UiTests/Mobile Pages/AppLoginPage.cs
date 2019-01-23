@@ -55,13 +55,13 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[3]/android.widget.Button")]
         protected IWebElement MobileLogin { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[3]/android.widget.EditText")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='Input_UsernameVal']")]
         protected IWebElement EnterUsername { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[4]/android.widget.EditText")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='Input_PasswordVal']")]
         protected IWebElement EnterPassword { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[5]/android.widget.Button")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.Button[@resource-id='LoginButton']")]
         protected IWebElement ClickLogin { get; set; }
 
         
@@ -133,7 +133,9 @@ namespace TestApplication.UiTests.Pages
         public void MobileClickLogin()
         {
             MobileLogin.Click();
-            
+
+            System.Threading.Thread.Sleep(10000);
+
 
         }
 
@@ -142,7 +144,7 @@ namespace TestApplication.UiTests.Pages
             EnterUsername.SendKeys(ConfigurationManager.AppSettings["MobileUsername"]);
             EnterPassword.SendKeys(ConfigurationManager.AppSettings["MobilePassword"]);
             ClickLogin.Click();
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(20000);
 
         }
 

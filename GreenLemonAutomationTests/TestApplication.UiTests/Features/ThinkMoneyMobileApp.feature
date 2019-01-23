@@ -27,5 +27,26 @@ Scenario: Check the Credit Score for the registered user
 
 When I click on Login button
 And I Login as the test user
-And I can see the test user's credit score 
+Then I can see the user's credit score 
+
+Scenario: Autochat test to Buy a House 
+
+When I click on Login button
+And I Login as the test user
+And I click on Goals Icon
+And I can autochat to Buy a House 
+Then the autochat window opens 
+
+When I click on Not Yet for the question First, do you already own a property? 
+Then I can see the Auto response as - Ok, and when you get your new property 
+#Restart Plan button
+When I click on Restart Plan 
+Then the chat windows restarts 
+
+#Scenario: Find offers 
+#
+#When I click on 
+
+
+
 

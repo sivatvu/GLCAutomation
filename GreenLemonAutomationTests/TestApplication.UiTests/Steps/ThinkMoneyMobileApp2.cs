@@ -110,10 +110,69 @@ namespace TestApplication.UiTests.Steps
         {
             AppLoginPage Aplp = new AppLoginPage(driver);
             Aplp.MLogin();
-            driver.Quit();
+            
 
         }
 
+        [When(@"I click on Goals Icon")]
+        public void WhenIClickOnGoalsIcon()
+        {
+            MobileChatFlows Mcf = new MobileChatFlows(driver);
+            Mcf.GoalsIcon();
+
+        }
+        [When(@"I can autochat to Buy a House")]
+        public void WhenICanAutochatToBuyAHouse()
+        {
+            MobileChatFlows Mcf = new MobileChatFlows(driver);
+            Mcf.ChatBuyaHouse();
+            
+        }
+
+        [When(@"I click on Not Yet for the question First, do you already own a property\?")]
+        public void WhenIClickOnNotYetForTheQuestionFirstDoYouAlreadyOwnAProperty()
+        {
+            MobileChatFlows Mcf = new MobileChatFlows(driver);
+            Mcf.StartChat();
+        }
+
+        [When(@"I click on Restart Plan")]
+        public void WhenIClickOnRestartPlan()
+        {
+            MobileChatFlows Mcf = new MobileChatFlows(driver);
+            Mcf.ClickRestartPlanLink();
+        }
+
+
+        [Then(@"I can see the user's credit score")]
+        public void ThenICanSeeTheUserSCreditScore()
+        {
+            AppHome Ahp = new AppHome(driver);
+            Ahp.MobileCreditscoreDisplays();
+            driver.Quit();
+        }
+
+        [Then(@"the autochat window opens")]
+        public void ThenTheAutochatWindowOpens()
+        {
+            MobileChatFlows Mcf = new MobileChatFlows(driver);
+            Mcf.ChatWindow();
+        }
+
+        [Then(@"I can see the Auto response as - Ok, and when you get your new property")]
+        public void ThenICanSeeTheAutoResponseAs_OkAndWhenYouGetYourNewProperty()
+        {
+            MobileChatFlows Mcf = new MobileChatFlows(driver);
+            Mcf.VerifyAutoChatResponse();
+        }
+
+        [Then(@"the chat windows restarts")]
+        public void ThenTheChatWindowsRestarts()
+        {
+            MobileChatFlows Mcf = new MobileChatFlows(driver);
+            Mcf.VerifyRestartLink();
+            driver.Quit();
+        }
 
 
     }
