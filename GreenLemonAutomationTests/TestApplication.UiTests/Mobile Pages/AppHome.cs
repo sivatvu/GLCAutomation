@@ -13,12 +13,14 @@ namespace TestApplication.UiTests.Pages
     public class AppHome
     {
 
-        [FindsBy(How = How.ClassName, Using = "android.view.View")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='$b3']")]
         protected IWebElement MobileCreditScore { get; set; }
 
-        
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b4-DealsLink']")]
+        protected IWebElement Offers { get; set; }
 
-
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b4-ReportLink']")]
+        protected IWebElement Report { get; set; }
 
 
 
@@ -55,7 +57,23 @@ namespace TestApplication.UiTests.Pages
             System.Threading.Thread.Sleep(1000);
         }
 
-        
+        public void ClickOffers()
+        {
+
+            Offers.Click();
+            System.Threading.Thread.Sleep(10000);
+
+        }
+
+        public void ClickReport()
+        {
+
+            Report.Click();
+            System.Threading.Thread.Sleep(10000);
+
+
+        }
+
 
     }
 }

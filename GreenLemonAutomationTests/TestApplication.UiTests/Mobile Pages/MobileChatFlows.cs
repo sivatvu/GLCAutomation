@@ -25,7 +25,7 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-1-EnterChatFlow']")]
         protected IWebElement BuyaHouseChatWindow { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-0-b3-Message']")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-0-b3-Content']")]
         protected IWebElement ChatWindowAppears { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l2-0-OptionLink']")]
@@ -40,7 +40,7 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-7-b3-Message']")]
         protected IWebElement RestartChat { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-6-b3-Message']")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-16-b3-Content']")]
         protected IWebElement AutoChatResponse { get; set; }
 
 

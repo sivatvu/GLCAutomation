@@ -16,39 +16,60 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.LinkText, Using = "Council Tenant")]
         protected IWebElement CouncilTenant { get; set; }
 
-        [FindsBy(How = How.LinkText, Using = "Mr.")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[contains(@text,'Mr.')]")]
         protected IWebElement Title { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "android.widget.EditText")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='FNameIn']")]
         protected IWebElement FN { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "android.widget.EditText")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='SNameIn']")]
         protected IWebElement SN { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[4]/android.view.View/android.view.View[1]/android.widget.Spinner")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.Spinner[@resource-id='DOBIn']")]
         protected IWebElement DOB { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[5]/android.view.View/android.view.View[1]/android.widget.EditText")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='PhoneNumberIn']")]
         protected IWebElement TN { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[8]/android.view.View/android.view.View[1]")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[contains(@text,'Self Employed')]")]
         protected IWebElement Emp { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//android.view.View[contains(@text,'Homeowner')]")]
+        protected IWebElement ResiStatus { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='GAIIn']")]
+        protected IWebElement GrossAnnualIncome { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='b14-l4-0-Input_StreetNumber']")]
+        protected IWebElement HouseNo { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='b14-l4-0-Input_PostCode']")]
+        protected IWebElement PostCode { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//android.view.View[contains(@text,'2019')]")]
+        protected IWebElement MoveinYear { get; set; }
+        [FindsBy(How = How.XPath, Using = "//android.widget.Button[contains(@text,'Find my address')]")]
+        protected IWebElement FindMyAddress { get; set; }
+        [FindsBy(How = How.XPath, Using = "//android.widget.Button[contains(@text,'Select')]")]
+        protected IWebElement SelectAddress { get; set; }
+        [FindsBy(How = How.XPath, Using = "//android.widget.Button[@resource-id='Next']")]
+        protected IWebElement Next { get; set; }
 
 
-        [FindsBy(How = How.ClassName, Using = "android.widget.Button[2]")]
+
+        [FindsBy(How = How.XPath, Using = "//*[@resource-id='SignUp']")]
         protected IWebElement SignUp { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.EditText")]
+        [FindsBy(How = How.XPath, Using = "//*[@resource-id='UsernameIn']")]
         protected IWebElement Username { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[3]/android.view.View/android.view.View[1]/android.widget.EditText")]
+        [FindsBy(How = How.XPath, Using = "//*[@resource-id='PasswordIn']")]
         protected IWebElement Password { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "	/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[4]/android.view.View/android.view.View[1]/android.widget.EditText")]
+        [FindsBy(How = How.XPath, Using = "//*[@resource-id='PasswordRIn']")]
         protected IWebElement ReTypePassword { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "android.widget.Button")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.Button[contains(@text,'Enter')]")]
         protected IWebElement Enter { get; set; }
 
 
@@ -74,9 +95,30 @@ namespace TestApplication.UiTests.Pages
         }
 
 
+        public void EnterPersonalDetails()
+        {
+            Title.Click();
+            FN.SendKeys(ConfigurationManager.AppSettings["Firstname"]);
+            SN.SendKeys(ConfigurationManager.AppSettings["Surname"]);
+            DOB.SendKeys(ConfigurationManager.AppSettings["DOB"]);
+            TN.SendKeys(ConfigurationManager.AppSettings["Telephonenumber"]);
+            Emp.Click();
+            ResiStatus.Click();
+            GrossAnnualIncome.SendKeys(ConfigurationManager.AppSettings["GAI"]);
+            HouseNo.SendKeys(ConfigurationManager.AppSettings["House"]);
+            PostCode.SendKeys(ConfigurationManager.AppSettings["PCode"]);
+            MoveinYear.SendKeys(ConfigurationManager.AppSettings["Year"]);
+            FindMyAddress.Click();
+            System.Threading.Thread.Sleep(1000);
+            //SelectAddress.Click();
+            //System.Threading.Thread.Sleep(1000);
+            Next.Click();
+        }
+
         public void Signup()
         {
             SignUp.Click();
+            System.Threading.Thread.Sleep(10000);
         }
 
        
@@ -93,7 +135,7 @@ namespace TestApplication.UiTests.Pages
 
             Enter.Click();
             System.Threading.Thread.Sleep(1000);
-            Enter.Click();
+            
 
         }
 
@@ -150,3 +192,20 @@ namespace TestApplication.UiTests.Pages
 
     }
 }
+
+// Enter = //android.widget.Button[contains(@text,'Enter')]
+//Title = //android.view.View[contains(@text,'Mr.')]
+//Employment Status = //android.view.View[contains(@text,'Self Employed')]
+//Residential Status = //android.view.View[contains(@text,'Homeowner')]
+//First Name = //android.widget.EditText[@resource-id='FNameIn']
+//Surname = //android.widget.EditText[@resource-id='SNameIn']
+//DOB = //android.widget.Spinner[@resource-id='DOBIn']
+//Surname = //android.widget.EditText[@resource-id='PhoneNumberIn']
+//GAI = //android.widget.EditText[@resource-id='GAIIn']
+//HouseNo = //android.widget.EditText[@resource-id='b14-l4-0-Input_StreetNumber']
+//PostCode = //android.widget.EditText[@resource-id='b14-l4-0-Input_PostCode']
+//Move in year = //android.view.View[contains(@text,'2019')]
+//Find my address = //android.widget.Button[contains(@text,'Find my address')]
+//Select Find my address = //android.widget.Button[contains(@text,'Select')]
+
+//Next = //android.widget.Button[@resource-id='Next']

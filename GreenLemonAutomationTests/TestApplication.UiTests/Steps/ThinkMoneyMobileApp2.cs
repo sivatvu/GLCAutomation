@@ -43,11 +43,18 @@ namespace TestApplication.UiTests.Steps
         }
 
 
+        [When(@"I Click on Sign up button")]
+        public void WhenIClickOnSignUpButton()
+        {
+            AppLoginPage Aplp = new AppLoginPage(driver);
+            Aplp.Signup();
+        }
+
+
         [When(@"I enter Username, Password & Re-Type Password in App")]
         public void WhenIEnterUsernamePasswordRe_TypePasswordInApp()
         {
             AppLoginPage Aplp = new AppLoginPage(driver);
-            Aplp.Signup();
             Aplp.Login();
         }
 
@@ -58,6 +65,15 @@ namespace TestApplication.UiTests.Steps
             Aplp.EnterLogin();
             System.Threading.Thread.Sleep(3000);
         }
+
+        [When(@"I entered all the details to Sign up and click on Next")]
+        public void WhenIEnteredAllTheDetailsToSignUpAndClickOnNext()
+        {
+            AppLoginPage Aplp = new AppLoginPage(driver);
+            Aplp.EnterPersonalDetails();
+        }
+
+
 
         [When(@"I enter the FirstName")]
         public void WhenIEnterTheFirstName()
@@ -143,6 +159,57 @@ namespace TestApplication.UiTests.Steps
             Mcf.ClickRestartPlanLink();
         }
 
+        [When(@"I click on Deals")]
+        public void WhenIClickOnDeals()
+        {
+            AppHome Ahp = new AppHome(driver);
+            Ahp.ClickOffers();
+        }
+
+        [When(@"I click on Find offers for me Button")]
+        public void WhenIClickOnFindOffersForMeButton()
+        {
+            AppHome Ahp = new AppHome(driver);
+            Ahp.ClickReport();
+            
+        }
+
+        [When(@"I click on Reports")]
+        public void WhenIClickOnReports()
+        {
+            AppHome Ahp = new AppHome(driver);
+            Ahp.ClickReport();
+        }
+
+        [When(@"I click on About You tab")]
+        public void WhenIClickOnAboutYouTab()
+        {
+            Reports rp = new Reports(driver);
+            rp.ClickAboutYou();
+        }
+
+        [When(@"I click on Accounts")]
+        public void WhenIClickOnAccounts()
+        {
+            Reports rp = new Reports(driver);
+            rp.ClickAccounts();
+        }
+
+        [When(@"I click on Corrections")]
+        public void WhenIClickOnCorrections()
+        {
+            Reports rp = new Reports(driver);
+            rp.ClickCorrections();
+        }
+
+        [When(@"I click on Searches")]
+        public void WhenIClickOnSearches()
+        {
+            Reports rp = new Reports(driver);
+            rp.ClickSearches();
+        }
+
+
 
         [Then(@"I can see the user's credit score")]
         public void ThenICanSeeTheUserSCreditScore()
@@ -174,6 +241,61 @@ namespace TestApplication.UiTests.Steps
             driver.Quit();
         }
 
+        [Then(@"I can see the Find offers for me Page")]
+        public void ThenICanSeeTheFindOffersForMePage()
+        {
+            AppOffers AOP = new AppOffers(driver);
+            AOP.VerifyFindOffersforme();
+        }
+
+        [Then(@"I can see my offers")]
+        public void ThenICanSeeMyOffers()
+        {
+            AppOffers AOP = new AppOffers(driver);
+            AOP.VerifyMyOffers();
+            driver.Quit();
+        }
+
+        [Then(@"I can see the Overview report")]
+        public void ThenICanSeeTheOverviewReport()
+        {
+            Reports rp = new Reports(driver);
+            rp.VerifyOverview();
+        }
+
+        [Then(@"I can see my address and Current Address")]
+        public void ThenICanSeeMyAddressAndCurrentAddress()
+        {
+            Reports rp = new Reports(driver);
+            rp.VerifyAddress();
+        }
+
+        [Then(@"I can see my Credit cards, Current accounts and Loans")]
+        public void ThenICanSeeMyCreditCardsCurrentAccountsAndLoans()
+        {
+            Reports rp = new Reports(driver);
+            rp.VerifyCreditCards();
+        }
+
+        [Then(@"I can see the number of corrections")]
+        public void ThenICanSeeTheNumberOfCorrections()
+        {
+            Reports rp = new Reports(driver);
+            rp.VerifyNumberOfCorrections();
+        }
+
+        [Then(@"I can search for the Credit application searches")]
+        public void ThenICanSearchForTheCreditApplicationSearches()
+        {
+            Reports rp = new Reports(driver);
+            rp.VerifyCreditApplicationSearches();
+            driver.Quit();
+        }
+        [Then(@"I can set up the Credit Report")]
+        public void ThenICanSetUpTheCreditReport()
+        {
+            driver.Quit();
+        }
 
     }
 }
