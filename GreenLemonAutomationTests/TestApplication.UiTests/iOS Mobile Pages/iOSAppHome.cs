@@ -17,11 +17,11 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//XCUIElementTypeButton[@name='KBA']")]
         protected IWebElement MobileCreditScore { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b4-DealsLink']")]
-        protected IWebElement Offers { get; set; }
+        [FindsBy(How = How.XPath, Using = "//XCUIElementTypeLink[@name='Deals']")]
+        protected IWebElement iOSOffers { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b4-ReportLink']")]
-        protected IWebElement Report { get; set; }
+        [FindsBy(How = How.XPath, Using = "//XCUIElementTypeStaticText[@name='Report']")]
+        protected IWebElement iOSReport { get; set; }
 
 
 
@@ -59,18 +59,18 @@ namespace TestApplication.UiTests.Pages
             System.Threading.Thread.Sleep(1000);
         }
 
-        public void ClickOffers()
+        public void iOSClickOffers()
         {
 
-            Offers.Click();
+            iOSOffers.Click();
             System.Threading.Thread.Sleep(10000);
 
         }
 
-        public void ClickReport()
+        public void iOSClickReport()
         {
 
-            Report.Click();
+            iOSReport.Click();
             System.Threading.Thread.Sleep(10000);
 
 

@@ -1,4 +1,4 @@
-﻿Feature: ThinkMoney Mobile App
+﻿	Feature: ThinkMoney Mobile App
 
 	In order to verify the new software changes
 	As a test user 
