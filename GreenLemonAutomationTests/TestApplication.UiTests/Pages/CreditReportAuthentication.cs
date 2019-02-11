@@ -17,13 +17,13 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//div[@class='Heading1' and text()='Credit Report authentication']")]
         protected IWebElement CRATitle { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@tabindex='3']")]
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'LLOYDS BANK')]")]
         protected IWebElement Question1 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@tabindex='8']")]
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'£ 1000 to £ 1499')]")]
         protected IWebElement Question2 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@tabindex='14']")]
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'CARPHONE WAREHOUSE')]")]
         protected IWebElement Question3 { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@type='submit' and @value='Enter']")]
@@ -45,7 +45,7 @@ namespace TestApplication.UiTests.Pages
 
        public void CRAPage()
         {
-            IWebElement element = _driver.FindElement(By.XPath("//div[@class='Heading1']"));
+            IWebElement element = _driver.FindElement(By.XPath("//*[text()='Home']"));
             Assert.IsTrue(element.Displayed);
         }
 
@@ -53,7 +53,7 @@ namespace TestApplication.UiTests.Pages
         {
             Question1.Click();
             Question2.Click();
-            Question3.Click();
+            //Question3.Click();
         }
 
         public void SubmittheAnswers()

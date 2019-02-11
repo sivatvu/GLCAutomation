@@ -37,15 +37,16 @@ namespace CBT_Example_2
 
         #region when 
 
-        [When(@"I login as the test user")]
-        public void WhenILoginAsTheTestUser()
+       
+        [When(@"I login as the test user on Web App")]
+        public void WhenILoginAsTheTestUserOnWebApp()
         {
             driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["ThinkMoneyLogin"]);
             LoginPage lp = new LoginPage(driver);
             lp.WebLogin();
-            
 
         }
+
 
 
         [When(@"I enter Username, Password & Re-Type Password")]
@@ -188,6 +189,7 @@ namespace CBT_Example_2
         {
             PersonalDetails pd = new PersonalDetails(driver);
             pd.EnterPD();
+            //driver.Quit();
         }
 
         //[When(@"I have entered my Gross annual Income")]
@@ -285,6 +287,40 @@ namespace CBT_Example_2
             cfp.Clickonthekey();
         }
 
+        [When(@"I click on Reports on Web App")]
+        public void WhenIClickOnReportsOnWebApp()
+        {
+            Home hp = new Home(driver);
+            hp.ClickReport();
+        }
+
+        [When(@"I click on About You tab on Web App")]
+        public void WhenIClickOnAboutYouTabOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+            RWP.ClickAboutYou();
+        }
+
+        [When(@"I click on Accounts on Web App")]
+        public void WhenIClickOnAccountsOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+            RWP.ClickAccounts();
+        }
+
+        [When(@"I click on Corrections on Web App")]
+        public void WhenIClickOnCorrectionsOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+            RWP.ClickCorrections();
+        }
+
+        [When(@"I click on Searches on Web App")]
+        public void WhenIClickOnSearchesOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+            RWP.ClickSearches();
+        }
 
         #endregion
 
@@ -419,6 +455,41 @@ namespace CBT_Example_2
         {
             ChatFlows cfp = new ChatFlows(driver);
             cfp.Verifythechat();
+            driver.Quit();
+        }
+
+        [Then(@"I can see the Overview report on Web App")]
+        public void ThenICanSeeTheOverviewReportOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+                RWP.VerifyOverview();
+        }
+
+        [Then(@"I can see my address and Current Address on Web App")]
+        public void ThenICanSeeMyAddressAndCurrentAddressOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+            RWP.VerifyAddress();
+        }
+
+        [Then(@"I can see my Credit cards, Current accounts and Loans on Web App")]
+        public void ThenICanSeeMyCreditCardsCurrentAccountsAndLoansOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+            RWP.VerifyCreditCards();
+        }
+
+        [Then(@"I can see the number of corrections on Web App")]
+        public void ThenICanSeeTheNumberOfCorrectionsOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+            RWP.VerifyNumberOfCorrections();
+        }
+        [Then(@"I can search for the Credit application searches on Web App")]
+        public void ThenICanSearchForTheCreditApplicationSearchesOnWebApp()
+        {
+            ReportsWeb RWP = new ReportsWeb(driver);
+            RWP.VerifyCreditApplicationSearches();
             driver.Quit();
         }
 

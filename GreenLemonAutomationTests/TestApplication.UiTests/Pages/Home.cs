@@ -26,6 +26,10 @@ namespace TestApplication.UiTests.Pages
         protected IWebElement ChatFlows { get; set; }
 
 
+        [FindsBy(How = How.XPath, Using = "//a[contains(text(), 'Report')]")]
+        protected IWebElement Report { get; set; }
+
+
         public Home(IWebDriver driver)
         {
             _driver = driver;
@@ -55,7 +59,14 @@ namespace TestApplication.UiTests.Pages
             System.Threading.Thread.Sleep(500);
         }
 
+        public void ClickReport()
+        {
 
+            Report.Click();
+            System.Threading.Thread.Sleep(10000);
+
+
+        }
 
 
 

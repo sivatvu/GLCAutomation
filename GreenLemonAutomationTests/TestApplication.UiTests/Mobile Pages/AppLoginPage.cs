@@ -73,7 +73,7 @@ namespace TestApplication.UiTests.Pages
         protected IWebElement Enter { get; set; }
 
 
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[3]/android.widget.Button")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.Button[@resource-id='Login']")]
         protected IWebElement MobileLogin { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@resource-id='Input_UsernameVal']")]

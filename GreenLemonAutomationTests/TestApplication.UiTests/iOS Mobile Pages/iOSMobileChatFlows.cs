@@ -107,11 +107,6 @@ namespace TestApplication.UiTests.Pages
 
         public void iOSClickRestartPlanLink()
         {
-            var element = iOSRestartPlanLink;
-            Actions actions = new Actions(driver);
-            actions.MoveToElement(element);
-            actions.Perform();
-
             iOSRestartPlanLink.Click();
             System.Threading.Thread.Sleep(10000);
 

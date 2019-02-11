@@ -12,7 +12,7 @@ namespace TestApplication.UiTests.Pages
     public class LoginPage
     {
 
-        [FindsBy(How = How.XPath, Using = "//div[@class='Heading1' and text()='Create Password']")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(), 'Create your account')]")]
         protected IWebElement CreateAccountPage { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//a[contains(text(),'+44 3333 443 654')]")]
@@ -29,25 +29,25 @@ namespace TestApplication.UiTests.Pages
 
         private readonly IWebDriver _driver;
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='E-mail']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='E-mail *']")]
         protected IWebElement Username { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Password']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Password *']")]
         protected IWebElement Password { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Re-type Password']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Re-type Password *']")]
         protected IWebElement ReTypePassword { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@type='submit']")]
         protected IWebElement Enter { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='WebPatterns_wt1_block_wtUsername_wtUserNameInput']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Username']")]
         protected IWebElement WebUsername { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='WebPatterns_wt1_block_wtPassword_wtPasswordInput']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Password']")]
         protected IWebElement WebPassword { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='WebPatterns_wt1_block_wtAction_wtLoginButton']")]
+        [FindsBy(How = How.XPath, Using = "//input[@value='Login']")]
         protected IWebElement WebLoginButton { get; set; }
 
 

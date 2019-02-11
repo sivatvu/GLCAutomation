@@ -22,13 +22,13 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b4-GoalsLink']")]
         protected IWebElement ClickGoalsIcon { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-1-EnterChatFlow']")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@text=' Buy a house']")]
         protected IWebElement BuyaHouseChatWindow { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-0-b3-Content']")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@text='Welcome to CreditClever House purchase plan']")]
         protected IWebElement ChatWindowAppears { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l2-0-OptionLink']")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@text='Not yet']")]
         protected IWebElement Notyet { get; set; }
 
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.view.View[3]/android.view.View[7]/android.view.View/android.view.View/android.view.View[2]")]
@@ -40,7 +40,7 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-7-b3-Message']")]
         protected IWebElement RestartChat { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='l1-16-b3-Content']")]
+        [FindsBy(How = How.XPath, Using = "//android.view.View[@text='Ok, and when you get your new property, will you live in it or rent it out?']")]
         protected IWebElement AutoChatResponse { get; set; }
 
 
@@ -59,7 +59,7 @@ namespace TestApplication.UiTests.Pages
         {
 
            Notyet.Click();
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(20000);
             
 
         }

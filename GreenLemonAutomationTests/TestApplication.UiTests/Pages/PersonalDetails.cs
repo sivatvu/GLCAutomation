@@ -13,31 +13,31 @@ namespace TestApplication.UiTests.Pages
     public class PersonalDetails
     {
 
-        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Mr.')]")]
+        [FindsBy(How = How.XPath, Using = "//div[text()='Mr']")]
         protected IWebElement Title { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='First Name']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='First Name *']")]
         protected IWebElement FN { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Surname']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Surname *']")]
         protected IWebElement SN{ get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Date of Birth']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Date of birth *']")]
         protected IWebElement DOB { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Telephone number']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Mobile number *']")]
         protected IWebElement TN { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Self Employed')]")]
+        [FindsBy(How = How.XPath, Using = "//div[text()='Self Employed']")]
         protected IWebElement Emp { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Homeowner')]")]
+        [FindsBy(How = How.XPath, Using = "//div[text()='Homeowner']")]
         protected IWebElement ResD { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@type='submit' and @value='Enter']")]
+        [FindsBy(How = How.XPath, Using = "//input[@type='submit' and @value='Next']")]
         protected IWebElement EnterPersonalDetails { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@type='checkbox'][1]")]
+        [FindsBy(How = How.XPath, Using = "//input[@type='checkbox' and @style='margin-left: 0px']")]
         protected IWebElement Agreed { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@placeholder='House/Flat number (optional)']")]
@@ -55,10 +55,10 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//input[@placeholder='Gross annual income (£)']")]
         protected IWebElement Gross { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Enter your personal details')]")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'We just need a few details ')]")]
         protected IWebElement PersonalDetailsPage { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@type='submit' and @value='Address Search']")]
+        [FindsBy(How = How.XPath, Using = "//input[@type='submit' and @value='Find my address']")]
         protected IWebElement AddressSearchButton { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@type='submit' and @value='Add Address']")]
@@ -141,6 +141,7 @@ namespace TestApplication.UiTests.Pages
         {
 
             EnterPersonalDetails.Click();
+            System.Threading.Thread.Sleep(10000);
         }
 
         public void Address()
@@ -184,6 +185,7 @@ namespace TestApplication.UiTests.Pages
         public void AddAddress()
         {
             AddAddressButton.Click();
+            System.Threading.Thread.Sleep(10000);
 
         }
 

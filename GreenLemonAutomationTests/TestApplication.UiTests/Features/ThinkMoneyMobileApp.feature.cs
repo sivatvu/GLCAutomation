@@ -143,10 +143,6 @@ testRunner.Then("the autochat window opens", ((string)(null)), ((TechTalk.SpecFl
 testRunner.When("I click on Not Yet for the question First, do you already own a property?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
 testRunner.Then("I can see the Auto response as - Ok, and when you get your new property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 42
-testRunner.When("I click on Restart Plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
-testRunner.Then("the chat windows restarts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

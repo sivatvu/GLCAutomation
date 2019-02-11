@@ -15,10 +15,10 @@ namespace TestApplication.UiTests.Pages
 
         
 
-        [FindsBy(How = How.XPath, Using = "//*[@resource-id='FindOffers']")]
+        [FindsBy(How = How.XPath, Using = "//*[@text='Find offers for me']")]
         protected IWebElement FindOffersforme { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//*[@resource-id='b1-Title']")]
+        [FindsBy(How = How.XPath, Using = "//*[@text='Loans']")]
         protected IWebElement MyOffers { get; set; }
 
 

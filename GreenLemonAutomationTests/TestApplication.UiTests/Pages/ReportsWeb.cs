@@ -10,43 +10,45 @@ using System.Threading.Tasks;
 
 namespace TestApplication.UiTests.Pages
 {
-    public class Reports
+    public class ReportsWeb
     {
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@text='ABOUT YOU']")]
+        private readonly IWebDriver _driver;
+
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'About you')]")]
         protected IWebElement AboutYou { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b4-DealsLink']")]
         protected IWebElement Offers { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@text='OVERVIEW']")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Overview')]")]
         protected IWebElement Overview { get; set; }
 
 
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b3-tabscontent']")]
+        [FindsBy(How = How.XPath, Using = "//label[contains(text(),'Current address:')]")]
         protected IWebElement CurrentAddress { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@text='ACCOUNTS']")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Accounts')]")]
         protected IWebElement Accounts { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b5-CreditCardList']")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Credit cards')]")]
         protected IWebElement CreditCards { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@text='CORRECTIONS']")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Corrections')]")]
         protected IWebElement Corrections { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b8-Title']")]
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'A Notice of Correction is your chance to explain w')]")]
         protected IWebElement NumberOfCorrections { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@text='SEARCHES']")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Searches')]")]
         protected IWebElement Searches { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//android.view.View[@resource-id='b8-Title']")]
+        [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Credit application (hard) searches')]")]
         protected IWebElement CreditApplicationSearches { get; set; }
 
 
-        public Reports(AndroidDriver<AndroidElement> driver)
+        public ReportsWeb(IWebDriver driver)
         {
             driver = driver;
             PageFactory.InitElements(driver, this);

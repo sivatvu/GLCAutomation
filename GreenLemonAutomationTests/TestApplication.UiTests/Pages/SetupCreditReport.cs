@@ -53,7 +53,7 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Homepage')]")]
         protected IWebElement CScore { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@tabindex='1']")]
+        [FindsBy(How = How.XPath, Using = "//input[@value='Yes']")]
         protected IWebElement Yes { get; set; }
 
 

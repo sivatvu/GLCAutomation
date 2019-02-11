@@ -39,8 +39,8 @@ Then the autochat window opens
 When I click on Not Yet for the question First, do you already own a property? 
 Then I can see the Auto response as - Ok, and when you get your new property 
 #Restart Plan button
-When I click on Restart Plan 
-Then the chat windows restarts 
+#When I click on Restart Plan 
+#Then the chat windows restarts 
 
 Scenario: Find offers 
 

@@ -169,8 +169,8 @@ namespace TestApplication.UiTests.Steps
         [When(@"I click on Find offers for me Button")]
         public void WhenIClickOnFindOffersForMeButton()
         {
-            AppHome Ahp = new AppHome(driver);
-            Ahp.ClickReport();
+            AppOffers AO = new AppOffers(driver);
+            AO.ClickFindOffersforme();
             
         }
 
@@ -184,28 +184,28 @@ namespace TestApplication.UiTests.Steps
         [When(@"I click on About You tab")]
         public void WhenIClickOnAboutYouTab()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.ClickAboutYou();
         }
 
         [When(@"I click on Accounts")]
         public void WhenIClickOnAccounts()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.ClickAccounts();
         }
 
         [When(@"I click on Corrections")]
         public void WhenIClickOnCorrections()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.ClickCorrections();
         }
 
         [When(@"I click on Searches")]
         public void WhenIClickOnSearches()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.ClickSearches();
         }
 
@@ -231,6 +231,7 @@ namespace TestApplication.UiTests.Steps
         {
             MobileChatFlows Mcf = new MobileChatFlows(driver);
             Mcf.VerifyAutoChatResponse();
+            driver.Quit();
         }
 
         [Then(@"the chat windows restarts")]
@@ -259,35 +260,35 @@ namespace TestApplication.UiTests.Steps
         [Then(@"I can see the Overview report")]
         public void ThenICanSeeTheOverviewReport()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.VerifyOverview();
         }
 
         [Then(@"I can see my address and Current Address")]
         public void ThenICanSeeMyAddressAndCurrentAddress()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.VerifyAddress();
         }
 
         [Then(@"I can see my Credit cards, Current accounts and Loans")]
         public void ThenICanSeeMyCreditCardsCurrentAccountsAndLoans()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.VerifyCreditCards();
         }
 
         [Then(@"I can see the number of corrections")]
         public void ThenICanSeeTheNumberOfCorrections()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.VerifyNumberOfCorrections();
         }
 
         [Then(@"I can search for the Credit application searches")]
         public void ThenICanSearchForTheCreditApplicationSearches()
         {
-            Reports rp = new Reports(driver);
+            ReportsWeb rp = new ReportsWeb(driver);
             rp.VerifyCreditApplicationSearches();
             driver.Quit();
         }

@@ -21,16 +21,18 @@ Then I can see the iOS user's credit score
 
 Scenario: Autochat test to Buy a House on iOS Device
 
+
 When I click on Login button on iOS
 And I Login as the iOS test user
 And I click on Goals Icon on iOS
 And I can autochat to Buy a House on iOS
 Then the autochat window opens on iOS
+When I click on Restart Plan button
+Then the chat windows restarts on iOS
 ##ChatFlow response
 When I click on Not Yet for the question First, do you already own a property? on iOS
 Then I can see the Auto response as - Ok, and when you get your new property on iOS
-#When I click on Restart Plan button
-#Then the chat windows restarts on iOS
+
 
 Scenario: Find offers on iOS 
 
@@ -59,9 +61,3 @@ Then I can see the number of corrections on iOS
 #Searches Tab
 When I click on Searches on iOS
 Then I can search for the Credit application searches on iOS
-	
-
-
-
-
-

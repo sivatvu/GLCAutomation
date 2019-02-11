@@ -121,81 +121,85 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 24
-testRunner.When("I click on Login button on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
-testRunner.And("I Login as the iOS test user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on Login button on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
-testRunner.And("I click on Goals Icon on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I Login as the iOS test user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 27
-testRunner.And("I can autochat to Buy a House on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on Goals Icon on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
+testRunner.And("I can autochat to Buy a House on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
 testRunner.Then("the autochat window opens on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 30
-testRunner.When("I click on Not Yet for the question First, do you already own a property? on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Restart Plan button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
+testRunner.Then("the chat windows restarts on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 33
+testRunner.When("I click on Not Yet for the question First, do you already own a property? on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 34
 testRunner.Then("I can see the Auto response as - Ok, and when you get your new property on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Find offers on iOS", SourceLine=34)]
+        [TechTalk.SpecRun.ScenarioAttribute("Find offers on iOS", SourceLine=36)]
         public virtual void FindOffersOnIOS()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Find offers on iOS", null, ((string[])(null)));
-#line 35
+#line 37
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 37
-testRunner.When("I click on Login button on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
-testRunner.And("I Login as the iOS test user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
-testRunner.And("I click on Deals icon on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on Login button on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
-testRunner.Then("I can see the Find offers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I Login as the iOS test user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
-testRunner.When("I click on Find offers for me Button on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I click on Deals icon on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 42
+testRunner.Then("I can see the Find offers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 43
+testRunner.When("I click on Find offers for me Button on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 44
 testRunner.Then("I can see my offers on my iOS device", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Reports in iOS", SourceLine=44)]
+        [TechTalk.SpecRun.ScenarioAttribute("Reports in iOS", SourceLine=46)]
         public virtual void ReportsInIOS()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reports in iOS", null, ((string[])(null)));
-#line 45
+#line 47
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 46
-testRunner.When("I click on Login button on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
-testRunner.And("I Login as the iOS test user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
-testRunner.And("I click on Reports on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I click on Login button on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 49
-testRunner.Then("I can see the Overview report on my iOS device", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I Login as the iOS test user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 50
+testRunner.And("I click on Reports on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 51
+testRunner.Then("I can see the Overview report on my iOS device", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 53
 testRunner.When("I click on About You tab on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
-testRunner.Then("I can see my address and Current Address on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 54
+testRunner.Then("I can see my address and Current Address on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 56
 testRunner.When("I click on Accounts on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 55
-testRunner.Then("I can see my Credit cards, Current accounts and Loans on", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 57
+testRunner.Then("I can see my Credit cards, Current accounts and Loans on", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
 testRunner.When("I click on Corrections on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 58
-testRunner.Then("I can see the number of corrections on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 60
+testRunner.Then("I can see the number of corrections on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 62
 testRunner.When("I click on Searches on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 61
+#line 63
 testRunner.Then("I can search for the Credit application searches on iOS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
