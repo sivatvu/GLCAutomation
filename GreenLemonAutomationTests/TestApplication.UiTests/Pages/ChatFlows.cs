@@ -18,7 +18,7 @@ namespace TestApplication.UiTests.Pages
 
 
 
-        [FindsBy(How = How.XPath, Using = "//*[@href='/MCP_Web/Entry_ChatFlows.aspx']")]
+        [FindsBy(How = How.XPath, Using = "//*[@href='/MCP_Web/Entry_Goals.aspx']")]
         protected IWebElement ClickChatFlows { get; set; }
 
 
@@ -32,7 +32,7 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Improve credit score')]")]
         protected IWebElement ImproveCreditScore { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//a[@href='ChatFlow.aspx?ChatFlowName=Buy+a+car&(Not.Licensed.For.Production)=']")]
+        [FindsBy(How = How.XPath, Using = "//a[@href='ChatFlow.aspx?ChatFlowId=4&(Not.Licensed.For.Production)=']")]
         protected IWebElement BuyaCar { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//div[@class='Card']")]
@@ -50,6 +50,11 @@ namespace TestApplication.UiTests.Pages
 
         [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Did you know the average running cost of a car is ')]")]
         protected IWebElement verifyrunningcost { get; set; }
+
+
+        [FindsBy(How = How.XPath, Using = "//span[text()='Restart plan']")]
+        protected IWebElement RestartPlan { get; set; }
+
 
 
         public ChatFlows(IWebDriver driver)
@@ -152,6 +157,14 @@ namespace TestApplication.UiTests.Pages
 
             Assert.IsTrue(verifyrunningcost.Displayed);
             System.Threading.Thread.Sleep(20000);
+
+        }
+
+        public void ClickRestartplan()
+        {
+
+            RestartPlan.Click();
+            System.Threading.Thread.Sleep(1000);
 
         }
 

@@ -16,7 +16,7 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//div[text()='Mr']")]
         protected IWebElement Title { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='First Name *']")]
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder='First name *']")]
         protected IWebElement FN { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@placeholder='Surname *']")]
@@ -185,7 +185,7 @@ namespace TestApplication.UiTests.Pages
         public void AddAddress()
         {
             AddAddressButton.Click();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(2000);
 
         }
 

@@ -26,49 +26,19 @@ Scenario Outline: Account Registration and Verify the Credit Score
 	And I add my address 
     And I have agreed with the Terms and Conditions
     And I Click on Enter on Personal Details Page
-    Then I can successfully enter my personal details
-    #Credit Report Authentication
-    When I click on YES to set up the credit report
-	And I select the correct answers for the authentication questions 
+ #   Then I can successfully enter my personal details
+ #   #Credit Report Authentication
+ #   When I click on YES to set up the credit report
+	#And I select the correct answers for the authentication questions 
     And I submit the answers by pressing the Enter button
     Then I can verify the Credit Report authentication
     
 
-Examples:
+  Examples:
 
 | FirstName  | SurName    | DateofBirth | TelephoneNumber | GrossAnnualIncome |
 | CHELSEA | STEPHENS | 19/02/1960  | 01273006033     | 35000            |
 
-Scenario: Login as  the test user
-
-    When I login as the test user
-    Then I can see the test user's credit score
-    And I can see the offers 
-    And I can see the ChatFlows 
-#
-Scenario: Find offers to the test users
-
-    When I login as the test user
-    And I click on Offers
-    And I click on Find offers for me 
-    Then I can see offers for the test user
-
-
-Scenario: Automatic Chat Flows and chat workflow to Buy a car
-
-    When I login as the test user on Web App 
-    And I click on ChatFlows 
-    Then I can see the Actions and Goals button
-    When I click on Actions button 
-    Then I am on Actions Page and I can see how to improve my credit score
-    When I click on Goals Button
-    Then I can see the chat flows like Buy a car, Get credit etc., 
-    When I click on Buy a car Chat Flow
-    Then I can see the chat window for Buy a car 
-    When I click on Let's do it
-    Then I receive an automation responce as Let's put a key in the ignition and get started
-    When I click on the key symbol
-    Then I can see my average running cost of a car
 
 Scenario: Reports
     When I login as the test user on Web App
@@ -86,6 +56,38 @@ Scenario: Reports
 #Searches Tab
     When I click on Searches on Web App
     Then I can search for the Credit application searches on Web App
+
+
+Scenario: Decision tree to Buy a car
+
+    When I login as the test user on Web App 
+    And I click on ChatFlows 
+    Then I can see the Actions and Goals button
+    When I click on Actions button 
+    Then I am on Actions Page and I can see how to improve my credit score
+    When I click on Goals Button
+    Then I can see the chat flows like Buy a car, Get credit etc., 
+	When I click on Buy a car Chat Flow
+	And I click on Reset Plan
+	Then I the decision tree chatflows has been restarted 
+    When I click on Buy a car Chat Flow
+    Then I can see the chat window for Buy a car 
+    When I click on Let's do it
+    Then I receive an automation responce as Let's put a key in the ignition and get started
+    When I click on the key symbol
+    Then I can see my average running cost of a car
+	
+
+
+Scenario: Find Deals to the test users
+
+    When I login as the test user on Web App
+    And I click on Deals on Web App
+	And I select the Purpose of the loan
+    And I click on Find offers for me 
+    Then I can see offers for the test user
+	When I click on Go to borrow the money 
+	Then the page navigates to the loans website
 
 
 

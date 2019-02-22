@@ -23,15 +23,28 @@ namespace TestApplication.UiTests.Pages
 
         
 
-        [FindsBy(How = How.XPath, Using = "//*[contains(text(),'Offers')]")]
+        [FindsBy(How = How.XPath, Using = "//a[@href='/MCP_Web/Entry_Deals.aspx']")]
         protected IWebElement ClickOffers { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//*[contains(text(), 'Borrow £1,000 from Amigo Loans')]")]
+        [FindsBy(How = How.XPath, Using = "//*[contains(text(), 'Amigo')]")]
         protected IWebElement Amigo { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//*[contains(text(),'Amigo')]//following::input[1]")]
+        protected IWebElement GotoAmigo { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//img[@src='/assets/img/amigo-logo.svg']")]
+        protected IWebElement AmigoSite { get; set; }
+
+
         [FindsBy(How = How.XPath, Using = "//*[contains(text(), 'Borrow £1,200 from Likely Loans')]")]
         protected IWebElement Likely { get; set; }
         [FindsBy(How = How.XPath, Using = "//*[contains(text(), 'Borrow £1,500 from UK Credit')]")]
         protected IWebElement Ukcredit { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//select[@class='OSFillParent Mandatory']")]
+        protected IWebElement PurposeoftheLoan { get; set; }
+
+
 
 
         public Offers(IWebDriver driver)
@@ -66,13 +79,25 @@ namespace TestApplication.UiTests.Pages
             //Assert.IsTrue(Likely.Displayed);
             //Assert.IsTrue(Ukcredit.Displayed);
             
+       }
 
-
-
+        public void SelectpurposeoftheLoan()
+        {
+            //var option = PurposeoftheLoan;
+            var Select = new SelectElement(PurposeoftheLoan);
+            Select.SelectByText("Home Improvements");
         }
 
+        public void ClickAmigoOffers()
+        {
+            GotoAmigo.Click();
+            System.Threading.Thread.Sleep(4000);
+        }
 
-
+        public void VerifyAmigo()
+        {
+            Assert.IsTrue(AmigoSite.Displayed);
+        }
 
 
 

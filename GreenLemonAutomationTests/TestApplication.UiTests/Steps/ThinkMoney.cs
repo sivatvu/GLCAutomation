@@ -227,12 +227,23 @@ namespace CBT_Example_2
             cra.SubmittheAnswers();
         }
 
-        [When(@"I click on Offers")]
-        public void WhenIClickOnOffers()
+       
+
+        [When(@"I click on Deals on Web App")]
+        public void WhenIClickOnDealsOnWebApp()
         {
             Offers op = new Offers(driver);
             op.ClickonOffers();
         }
+
+        [When(@"I select the Purpose of the loan")]
+        public void WhenISelectThePurposeOfTheLoan()
+        {
+            Offers op = new Offers(driver);
+            driver.Manage().Window.Maximize();
+            op.SelectpurposeoftheLoan();
+        }
+
 
         [When(@"I click on Find offers for me")]
         public void WhenIClickOnFindOffersForMe()
@@ -241,6 +252,16 @@ namespace CBT_Example_2
             op.ClickonFindofferstome();
 
         }
+
+        [When(@"I click on Go to borrow the money")]
+        public void WhenIClickOnGoToBorrowTheMoney()
+        {
+            Offers op = new Offers(driver);
+            
+            op.ClickAmigoOffers();
+
+        }
+
 
 
         [When(@"I click on ChatFlows")]
@@ -256,6 +277,14 @@ namespace CBT_Example_2
         {
             ChatFlows cfp = new ChatFlows(driver);
             cfp.ClickActions();
+        }
+
+
+        [When(@"I click on Reset Plan")]
+        public void WhenIClickOnResetPlan()
+        {
+            ChatFlows cfp = new ChatFlows(driver);
+            cfp.ClickRestartplan();
         }
 
 
@@ -409,7 +438,7 @@ namespace CBT_Example_2
         {
             Offers op = new Offers(driver);
             op.MyOffers();
-            driver.Quit();
+            
         }
 
 
@@ -442,6 +471,16 @@ namespace CBT_Example_2
             cfp.Chatbox();
         }
 
+        [Then(@"I the decision tree chatflows has been restarted")]
+        public void ThenITheDecisionTreeChatflowsHasBeenRestarted()
+        {
+            ChatFlows cfp = new ChatFlows(driver);
+            cfp.GoalandActions();
+            
+        }
+
+
+
 
         [Then(@"I receive an automation responce as Let's put a key in the ignition and get started")]
         public void ThenIReceiveAnAutomationResponceAsLetSPutAKeyInTheIgnitionAndGetStarted()
@@ -456,6 +495,7 @@ namespace CBT_Example_2
             ChatFlows cfp = new ChatFlows(driver);
             cfp.Verifythechat();
             driver.Quit();
+
         }
 
         [Then(@"I can see the Overview report on Web App")]
@@ -491,6 +531,15 @@ namespace CBT_Example_2
             ReportsWeb RWP = new ReportsWeb(driver);
             RWP.VerifyCreditApplicationSearches();
             driver.Quit();
+        }
+
+        [Then(@"the page navigates to the loans website")]
+        public void ThenThePageNavigatesToTheLoansWebsite()
+        {
+            Offers op = new Offers(driver);
+            op.VerifyAmigo();
+            driver.Quit();
+
         }
 
 
