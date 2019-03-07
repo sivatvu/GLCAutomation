@@ -29,13 +29,13 @@ namespace TestApplication.UiTests.Pages
 
         private readonly IWebDriver _driver;
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='E-mail *']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@class, 'sign_up_input')]")]
         protected IWebElement Username { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Password *']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'Password') and @maxlength='256']")]
         protected IWebElement Password { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Re-type Password *']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'Password') and @maxlength='50']")]
         protected IWebElement ReTypePassword { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@type='submit']")]
@@ -49,6 +49,9 @@ namespace TestApplication.UiTests.Pages
 
         [FindsBy(How = How.XPath, Using = "//input[@value='Login']")]
         protected IWebElement WebLoginButton { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//input[@value='Sign up']")]
+        protected IWebElement SignupButton { get; set; }
 
 
         public LoginPage(IWebDriver driver)
@@ -98,6 +101,16 @@ namespace TestApplication.UiTests.Pages
         {
           
             Enter.Click();
+            System.Threading.Thread.Sleep(1000);
+
+
+
+        }
+
+        public void ClickSignup()
+        {
+
+            SignupButton.Click();
             System.Threading.Thread.Sleep(1000);
 
 

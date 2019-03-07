@@ -12,7 +12,8 @@ Background:
 @Tests @PersonalDetails @Register
 Scenario Outline: Account Registration and Verify the Credit Score
 
-    Then I am on Create Account page
+    When I click on Sign up button
+	Then I am on Create Account page
 	When I enter Username, Password & Re-Type Password
 	And I click on Enter
 	Then I can enter my personal details
@@ -21,8 +22,9 @@ Scenario Outline: Account Registration and Verify the Credit Score
     And I select Employment and Residential Status
 	#testcommit
     And I enter my address
-	And the month and year I moved in
 	And I click on Address Search
+	And the month and year I moved in
+	And I select the specific address
 	And I add my address 
     And I have agreed with the Terms and Conditions
     And I Click on Enter on Personal Details Page
@@ -37,7 +39,7 @@ Scenario Outline: Account Registration and Verify the Credit Score
   Examples:
 
 | FirstName  | SurName    | DateofBirth | TelephoneNumber | GrossAnnualIncome |
-| CHELSEA | STEPHENS | 19/02/1960  | 01273006033     | 35000            |
+| MARIE | RICHARDSON | 17/02/1960  | 07411577889    | 19000            |
 
 
 Scenario: Reports

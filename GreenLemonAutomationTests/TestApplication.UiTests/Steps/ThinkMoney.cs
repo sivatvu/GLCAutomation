@@ -28,7 +28,7 @@ namespace CBT_Example_2
         public void GivenINavigateToTheTestSite()
         {
             SetUp();
-            driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["ThinkMoney"]);
+            driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["ThinkMoneyTest"]);
         }
 
 
@@ -37,7 +37,14 @@ namespace CBT_Example_2
 
         #region when 
 
-       
+        [When(@"I click on Sign up button")]
+        public void WhenIClickOnSignUpButton()
+        {
+            LoginPage lp = new LoginPage(driver);
+            lp.ClickSignup();
+        }
+
+
         [When(@"I login as the test user on Web App")]
         public void WhenILoginAsTheTestUserOnWebApp()
         {
@@ -212,6 +219,14 @@ namespace CBT_Example_2
             PersonalDetails pd = new PersonalDetails(driver);
             pd.MovedInDates();
         }
+
+        [When(@"I select the specific address")]
+        public void WhenISelectTheSpecificAddress()
+        {
+            PersonalDetails pd = new PersonalDetails(driver);
+            pd.SelectspecificAddress();
+        }
+
 
         [When(@"I select the correct answers for the authentication questions")]
         public void WhenISelectTheCorrectAnswersForTheAuthenticationQuestions()

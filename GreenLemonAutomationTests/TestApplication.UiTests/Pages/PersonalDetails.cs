@@ -16,16 +16,16 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//div[text()='Mr']")]
         protected IWebElement Title { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='First name *']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'FirstName')]")]
         protected IWebElement FN { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Surname *']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'Surname')]")]
         protected IWebElement SN{ get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Date of birth *']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'DateOfBirth')]")]
         protected IWebElement DOB { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Mobile number *']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'TelephoneNumber')]")]
         protected IWebElement TN { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//div[text()='Self Employed']")]
@@ -37,22 +37,24 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//input[@type='submit' and @value='Next']")]
         protected IWebElement EnterPersonalDetails { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@type='checkbox' and @style='margin-left: 0px']")]
+        [FindsBy(How = How.XPath, Using = "//input[@type='checkbox' and @class='bigcheck']")]
         protected IWebElement Agreed { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='House/Flat number (optional)']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'AddressFlatNumber')]")]
         protected IWebElement House { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Postcode']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'AddressPostcode')]")]
         protected IWebElement PostCode { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Month']")]
+
+
+        [FindsBy(How = How.XPath, Using = "//select[contains(@id, 'Month')]")]
         protected IWebElement MonthMovedIn { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Year']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'Year')]")]
         protected IWebElement YearMovedin { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Gross annual income (£)']")]
+        [FindsBy(How = How.XPath, Using = "//input[contains(@id, 'Gross')]")]
         protected IWebElement Gross { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//div[contains(text(),'We just need a few details ')]")]
@@ -64,6 +66,9 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//input[@type='submit' and @value='Add Address']")]
         protected IWebElement AddAddressButton { get; set; }
 
+
+        [FindsBy(How = How.XPath, Using = "//*[contains(text(),'IDVERIFIER ST1 , ELY, CB6 2AG')]")]
+        protected IWebElement SelectAddress { get; set; }
 
 
 
@@ -185,6 +190,13 @@ namespace TestApplication.UiTests.Pages
         public void AddAddress()
         {
             AddAddressButton.Click();
+            System.Threading.Thread.Sleep(2000);
+
+        }
+
+        public void SelectspecificAddress()
+        {
+            SelectAddress.Click();
             System.Threading.Thread.Sleep(2000);
 
         }
