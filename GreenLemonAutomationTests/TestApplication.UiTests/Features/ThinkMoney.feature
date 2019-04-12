@@ -90,6 +90,3 @@ Scenario: Find Deals to the test users
     Then I can see offers for the test user
 	When I click on Go to borrow the money 
 	Then the page navigates to the loans website
-
-
-

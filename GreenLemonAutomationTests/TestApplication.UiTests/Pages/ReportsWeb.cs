@@ -38,7 +38,7 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Corrections')]")]
         protected IWebElement Corrections { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'A Notice of Correction is your chance to explain w')]")]
+        [FindsBy(How = How.XPath, Using = "//*[contains(text(),'Corrections on your report')]")]
         protected IWebElement NumberOfCorrections { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//div[contains(text(),'Searches')]")]
@@ -112,7 +112,7 @@ namespace TestApplication.UiTests.Pages
         {
 
             Corrections.Click();
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(5000);
 
         }
 

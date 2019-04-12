@@ -41,10 +41,10 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.XPath, Using = "//input[@type='submit']")]
         protected IWebElement Enter { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Username']")]
+        [FindsBy(How = How.XPath, Using = "//input[@type='email']")]
         protected IWebElement WebUsername { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//input[@placeholder='Password']")]
+        [FindsBy(How = How.XPath, Using = "//input[@type='password']")]
         protected IWebElement WebPassword { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//input[@value='Login']")]
@@ -91,7 +91,7 @@ namespace TestApplication.UiTests.Pages
             WebUsername.SendKeys(ConfigurationManager.AppSettings["WebUsername"]);
             WebPassword.SendKeys(ConfigurationManager.AppSettings["WebPassword"]);
             WebLoginButton.Click();
-
+            System.Threading.Thread.Sleep(2000);
         }
 
 
