@@ -76,6 +76,36 @@ namespace TestApplication.UiTests.Features
 #line hidden
         }
         
+        public virtual void Sign_InAndVerifyTheCreditScore(string email, string password, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in and verify the credit score", null, exampleTags);
+#line 11
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 7
+this.FeatureBackground();
+#line 13
+ testRunner.When("I click on Login button on the Web app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
+ testRunner.Then("I am on Login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
+ testRunner.When(string.Format("I enter the \"{0}\" and \"{1}\"", email, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+ testRunner.Then("I click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 17
+ testRunner.Then("I can verify the Credit score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Sign-in and verify the credit score, Ignacio32@email.com", SourceLine=21)]
+        public virtual void Sign_InAndVerifyTheCreditScore_Ignacio32Email_Com()
+        {
+#line 11
+this.Sign_InAndVerifyTheCreditScore("Ignacio32@email.com", "Pa55w0rd!", ((string[])(null)));
+#line hidden
+        }
+        
         public virtual void AccountRegistrationAndVerifyTheCreditScore(string firstName, string surName, string dateofBirth, string telephoneNumber, string grossAnnualIncome, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -87,45 +117,45 @@ namespace TestApplication.UiTests.Features
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Account Registration and Verify the Credit Score", null, @__tags);
-#line 13
+#line 25
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 15
+#line 27
     testRunner.When("I click on Sign up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 28
  testRunner.Then("I am on Create Account page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 17
+#line 29
  testRunner.When("I enter Username, Password & Re-Type Password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
+#line 30
  testRunner.And("I click on Enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 31
  testRunner.Then("I can enter my personal details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 32
     testRunner.When("I select the Title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 33
     testRunner.When(string.Format("I enter the following values into the Personal Details page \"{0}\", \"{1}\", \"{2}\", " +
                         "\"{3}\" and \"{4}\"", firstName, surName, dateofBirth, telephoneNumber, grossAnnualIncome), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 34
     testRunner.And("I select Employment and Residential Status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
-    testRunner.And("I enter my address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
- testRunner.And("I click on Address Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
- testRunner.And("the month and year I moved in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
- testRunner.And("I select the specific address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
- testRunner.And("I add my address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
-    testRunner.And("I have agreed with the Terms and Conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
-    testRunner.And("I Click on Enter on Personal Details Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
-    testRunner.And("I submit the answers by pressing the Enter button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 36
+    testRunner.And("I enter my address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+ testRunner.And("I click on Address Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 38
+ testRunner.And("the month and year I moved in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+ testRunner.And("I select the specific address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+ testRunner.And("I add my address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+    testRunner.And("I have agreed with the Terms and Conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 42
+    testRunner.And("I Click on Enter on Personal Details Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 47
+    testRunner.And("I submit the answers by pressing the Enter button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 48
     testRunner.Then("I can verify the Credit Report authentication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -134,117 +164,117 @@ this.FeatureBackground();
         [TechTalk.SpecRun.ScenarioAttribute("Account Registration and Verify the Credit Score, MARIE", new string[] {
                 "Tests",
                 "PersonalDetails",
-                "Register"}, SourceLine=41)]
+                "Register"}, SourceLine=53)]
         public virtual void AccountRegistrationAndVerifyTheCreditScore_MARIE()
         {
-#line 13
+#line 25
 this.AccountRegistrationAndVerifyTheCreditScore("MARIE", "RICHARDSON", "17/02/1960", "07411577889", "19000", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Reports", SourceLine=44)]
+        [TechTalk.SpecRun.ScenarioAttribute("Reports", SourceLine=56)]
         public virtual void Reports()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reports", null, ((string[])(null)));
-#line 45
+#line 57
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 46
+#line 58
     testRunner.When("I login as the test user on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
-    testRunner.And("I click on Reports on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
-    testRunner.Then("I can see the Overview report on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
-    testRunner.When("I click on About You tab on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
-    testRunner.Then("I can see my address and Current Address on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
-    testRunner.When("I click on Accounts on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
-    testRunner.Then("I can see my Credit cards, Current accounts and Loans on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 56
-    testRunner.When("I click on Corrections on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 57
-    testRunner.Then("I can see the number of corrections on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 59
-    testRunner.When("I click on Searches on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("I click on Reports on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 60
+    testRunner.Then("I can see the Overview report on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 62
+    testRunner.When("I click on About You tab on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+    testRunner.Then("I can see my address and Current Address on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 65
+    testRunner.When("I click on Accounts on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 66
+    testRunner.Then("I can see my Credit cards, Current accounts and Loans on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 68
+    testRunner.When("I click on Corrections on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 69
+    testRunner.Then("I can see the number of corrections on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 71
+    testRunner.When("I click on Searches on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 72
     testRunner.Then("I can search for the Credit application searches on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Decision tree to Buy a car", SourceLine=62)]
+        [TechTalk.SpecRun.ScenarioAttribute("Decision tree to Buy a car", SourceLine=74)]
         public virtual void DecisionTreeToBuyACar()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Decision tree to Buy a car", null, ((string[])(null)));
-#line 63
+#line 75
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 65
-    testRunner.When("I login as the test user on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
-    testRunner.And("I click on ChatFlows", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 67
-    testRunner.Then("I can see the Actions and Goals button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 68
-    testRunner.When("I click on Actions button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
-    testRunner.Then("I am on Actions Page and I can see how to improve my credit score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 70
-    testRunner.When("I click on Goals Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
-    testRunner.Then("I can see the chat flows like Buy a car, Get credit etc.,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 72
- testRunner.When("I click on Buy a car Chat Flow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 73
- testRunner.And("I click on Reset Plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
- testRunner.Then("I the decision tree chatflows has been restarted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 75
-    testRunner.When("I click on Buy a car Chat Flow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 76
-    testRunner.Then("I can see the chat window for Buy a car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 77
-    testRunner.When("I click on Let\'s do it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I login as the test user on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 78
+    testRunner.And("I click on ChatFlows", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 79
+    testRunner.Then("I can see the Actions and Goals button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 80
+    testRunner.When("I click on Actions button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 81
+    testRunner.Then("I am on Actions Page and I can see how to improve my credit score", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 82
+    testRunner.When("I click on Goals Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 83
+    testRunner.Then("I can see the chat flows like Buy a car, Get credit etc.,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 84
+ testRunner.When("I click on Buy a car Chat Flow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 85
+ testRunner.And("I click on Reset Plan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 86
+ testRunner.Then("I the decision tree chatflows has been restarted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 87
+    testRunner.When("I click on Buy a car Chat Flow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 88
+    testRunner.Then("I can see the chat window for Buy a car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 89
+    testRunner.When("I click on Let\'s do it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 90
     testRunner.Then("I receive an automation responce as Let\'s put a key in the ignition and get start" +
                     "ed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 79
+#line 91
     testRunner.When("I click on the key symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 80
+#line 92
     testRunner.Then("I can see my average running cost of a car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Find Deals to the test users", SourceLine=83)]
+        [TechTalk.SpecRun.ScenarioAttribute("Find Deals to the test users", SourceLine=95)]
         public virtual void FindDealsToTheTestUsers()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Find Deals to the test users", null, ((string[])(null)));
-#line 84
+#line 96
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 7
 this.FeatureBackground();
-#line 86
+#line 98
     testRunner.When("I login as the test user on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 87
+#line 99
     testRunner.And("I click on Deals on Web App", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 100
  testRunner.And("I select the Purpose of the loan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 89
+#line 101
     testRunner.And("I click on Find offers for me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 90
+#line 102
     testRunner.Then("I can see offers for the test user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 91
+#line 103
  testRunner.When("I click on Go to borrow the money", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 92
+#line 104
  testRunner.Then("the page navigates to the loans website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

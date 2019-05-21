@@ -24,7 +24,7 @@ namespace TestApplication.UiTests.Pages
         [FindsBy(How = How.Id, Using = "ctl00_cp_Login_Password")]
         protected IWebElement LoginPassword { get; set; }
 
-        [FindsBy(How = How.Id, Using = "ctl00_cp_Login_LoginButton")]
+        [FindsBy(How = How.Id, Using = "//input[@value='Log in']")]
         protected IWebElement LoginBtn { get; set; }
 
         private readonly IWebDriver _driver;
@@ -60,10 +60,6 @@ namespace TestApplication.UiTests.Pages
             PageFactory.InitElements(_driver, this);
         }
 
-
-       
-      
-
         public Boolean CreateAccountDisplays()
         {
 
@@ -76,6 +72,11 @@ namespace TestApplication.UiTests.Pages
             LoginPassword.SendKeys(passwd);
             LoginBtn.Click();
 
+        }
+
+        public void ClickLoginButton()
+        {
+            LoginBtn.Click();
         }
 
         public void Login()

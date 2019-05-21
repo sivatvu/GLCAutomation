@@ -37,6 +37,14 @@ namespace CBT_Example_2
 
         #region when 
 
+        [When(@"I click on Login button on the Web app")]
+        public void WhenIClickOnLoginButtonOnTheWebApp()
+        {
+            LoginPage lp = new LoginPage(driver);
+            lp.ClickLoginButton();
+        }
+
+
         [When(@"I click on Sign up button")]
         public void WhenIClickOnSignUpButton()
         {
@@ -369,6 +377,13 @@ namespace CBT_Example_2
         #endregion
 
         #region then
+
+        [Then(@"I am on Login page")]
+        public void ThenIAmOnLoginPage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
 
         [Then(@"I can see the test user's credit score")]
         public void ThenICanSeeTheTestUserSCreditScore()

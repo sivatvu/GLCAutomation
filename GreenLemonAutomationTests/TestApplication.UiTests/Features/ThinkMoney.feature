@@ -7,7 +7,19 @@
 Background: 
 
 	Given I navigate to the test site
-	
+
+Scenario Outline: Sign-in and verify the credit score
+
+	When I click on Login button on the Web app
+	Then I am on Login page
+	When I enter the "<email>" and "<password>"
+	Then I click on Login button
+	Then I can verify the Credit score
+
+Examples:
+
+	| email					 | password   | 
+	| Ignacio32@email.com    | Pa55w0rd!  | 
 
 @Tests @PersonalDetails @Register
 Scenario Outline: Account Registration and Verify the Credit Score
